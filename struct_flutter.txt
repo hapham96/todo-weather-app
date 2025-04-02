@@ -1,0 +1,27 @@
+lib/
+├── core/                 # Các thành phần cốt lõi dùng toàn app
+│   ├── services/         # Gọi API, DB, LocalStorage,...
+│   ├── models/           # Dữ liệu (POJO, JSON models)
+│   ├── utils/            # Format date, string, validator, helper chung
+│   └── constants/        # App color, strings, config...
+│
+├── features/             # Mỗi chức năng là 1 module riêng (feature-first)
+│   ├── todo/
+│   │   ├── data/         # Model + service cho todo
+│   │   ├── view/         # UI cho todo (screens, widgets)
+│   │   ├── provider/     # State management
+│   │   └── todo_page.dart
+│   │
+│   └── weather/
+│       ├── data/
+│       ├── view/
+│       ├── provider/
+│       └── weather_page.dart
+│
+├── shared/               # Widget, theme, component dùng chung
+│   ├── widgets/
+│   ├── styles/
+│   └── dialogs/
+│
+├── app.dart              # Setup routes, theme, root widget
+└── main.dart             # Entry point
